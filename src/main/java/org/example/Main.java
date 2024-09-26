@@ -27,6 +27,7 @@ public class Main {
         return pelis;
     }
 
+
     public static void escribir(ArrayList<Pelicula> pelis) throws IOException {
         StringBuilder plantilla = new StringBuilder();
         BufferedReader br = new BufferedReader(new FileReader("Plantilla.html"));
