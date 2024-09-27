@@ -2,6 +2,12 @@ package org.example;
 
 import lombok.Data;
 
+
+/**
+ * La clase Pelicula representa una película con sus atributos básicos.
+ * Utiliza Lombok para generar automáticamente los métodos getter y setter.
+ */
+
 @Data
 public class Pelicula {
 

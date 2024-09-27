@@ -5,6 +5,18 @@ import static java.lang.String.*;
 
 public class Main {
 
+    /**
+     * Lee la lista de películas desde el archivo CSV
+     *
+     * Este metodo abre el archivo "peliculas.csv", lee su contenido y crea objetos de la clase pelicula
+     * a partir de los datos leidos.
+     *
+     * Cada película se agrega a una lista que se devuelve al final.
+     *
+     * @return ArrayList<Pelicula> Una lista de objetos Pelicula que representan las películas leídas del archivo.
+     * @throws RuntimeException si el archivo no se encuentra o si ocurre un error de entrada/salida.
+     */
+
     public static ArrayList<Pelicula> leer(){
         ArrayList pelis = new ArrayList<Pelicula>();
         try {
@@ -27,6 +39,17 @@ public class Main {
         return pelis;
     }
 
+    /**
+     * Escribe información de una lista de películas en archivos HTML.
+     *
+     * Este metodo lee el documento "plantilla.html", lo copia y almacena para, con
+     * cada pelicula, sustituir ciertas claves por los valores que nos interesan de las peliculas y
+     * generando un documento html con la información de dicha pelicula.
+     * Los archivos html generados se guardan en una carpeta llamada "salida".
+     *
+     * @param pelis La lista de películas que se usarán para generar los archivos HTML.
+     * @throws IOException si ocurre un error durante la lectura o escritura de archivos.
+     */
 
     public static void escribir(ArrayList<Pelicula> pelis) throws IOException {
         StringBuilder plantilla = new StringBuilder();
@@ -59,6 +82,13 @@ public class Main {
 
     }
 
+
+    /**
+     * El metodo principal que ejecuta la aplicación.
+     *
+     * Este metodo llama al metodo leer para obtener la lista de películas y luego
+     * llama al metodo escribir para generar archivos HTML basados en la lista obtenida.
+     */
 
     public static void main(String[] args) {
 
